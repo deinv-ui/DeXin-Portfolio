@@ -1,0 +1,131 @@
+header {
+  height: 100vh;
+  padding-top: 10rem;
+  padding-left: 7rem;
+  overflow: hidden;
+}
+
+.header__container {
+  margin-top: 4.5rem;
+  text-align: left;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper_description h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.wrapper_description h5 {
+  font-size: 2rem;
+}
+
+.text-light {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: left;
+}
+
+.header__socials {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Increased gap for better spacing */
+  position: absolute;
+  bottom: 5rem; /* Move it higher by increasing this value */
+  right: 0;
+}
+
+.header__socials svg {
+  width: 2rem; /* Increased icon size */
+  height: 2rem; /* Increased icon size */
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 3rem; /* Increased height for better visibility */
+  background: var(--color-primary);
+  margin-top: 0.5rem; /* Add spacing above the line */
+}
+
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotateZ(90deg);
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.name-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s;
+  animation: blink 0.9s infinite;
+}
+
+.arrow {
+  font-size: 3rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+  animation: blink 0.9s infinite;
+}
+
+.name-link:hover {
+  color: #ffa500;
+  animation: none;
+}
+
+.name-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
