@@ -1,11 +1,60 @@
 nav {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
   z-index: 2;
-  position: static; /* Change from fixed to static */
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Required for absolute positioning of menu icon */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
   gap: 1rem;
+  transition: max-height 0.3s ease; /* Transition for mobile menu */
+  overflow: hidden; /* Hide overflow for animation */
+}
+
+/* Mobile menu style */
+.navbar-links.active {
+  display: flex; /* Show the links when the menu is open */
+  flex-direction: column; /* Stack links vertically */
+  position: absolute; /* Position relative to nav */
+  top: 60px; /* Below the navbar */
+  left: 0; /* Align to the left */
+  right: 0; /* Stretch to the right */
+  background: var(--color-bg-variant); /* Background color for the menu */
+  z-index: 1; /* Ensure it’s on top of other content */
+}
+
+/* Icon for the hamburger menu */
+.menu-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 2rem; /* Size of the menu icon */
+  color: white; /* Icon color */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links initially on small screens */
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .menu-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  nav {
+    padding: 1rem; /* Adjust padding for mobile */
+  }
 }
 
 nav a {
@@ -40,15 +89,16 @@ nav a:hover::after {
 nav a.active {
   color: var(--color-primary);
 }
+
 .go-to-top-button {
   z-index: 10;
   position: fixed;
-  bottom: 4rem; /* Position from the bottom */
-  right: 2rem; /* Position from the right */
-  background-color: #ff5722; /* Use your primary color */
+  bottom: 4rem;
+  right: 2rem;
+  background-color: var(--color-primary);
   padding: 30px;
   color: white;
-  border: none;
+  border: 2px solid white;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -61,5 +111,5 @@ nav a.active {
 }
 
 .go-to-top-button:hover {
-  background-color: var(--color-primary);
+  background-color: #ffc107;
 }
