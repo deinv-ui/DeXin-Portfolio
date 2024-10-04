@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import CTA from "./CTA";
 import ME from "../../assets/Head_Pic.jpg";
 import HeaderSocials from "./HeaderSocials";
@@ -8,19 +8,26 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div className="container header__container">
+        <div className="header__container">
           <div className="wrapper_description">
-            <h5>Hello I'm</h5>
-            <a href="#about" className="name-link">
-              <h1>De Xin</h1>
-              <span className="arrow">→</span>
-            </a>
-            <div className="text-light">Front End Developer</div>
+            <h1 className="intro-text">
+              Hello, I’m{" "}
+              <a href="#about" className="name-link">
+                De Xin
+                <span className="arrow">←</span>
+              </a>
+            </h1>
+            <h2 className="role-title">Front End Developer</h2>
+            <p className="description">
+              I build scalable and interactive web applications, focusing on
+              intuitive user experiences and modern frontend technologies.
+            </p>
+            <CTA />
           </div>
-          <CTA />
-          <div className="header__socials">
+
+          {/* <div className="header__socials">
             <HeaderSocials />
-          </div>
+          </div> */}
         </div>
       </header>
     );
