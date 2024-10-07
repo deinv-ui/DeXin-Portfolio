@@ -11,21 +11,21 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
+    title: "JobStore Clone with Modern Redesign",
     github: "https://github.com/inextdeve",
     demo: "https://inext.dev",
   },
   {
     id: 2,
     image: IMG2,
-    title: "Crypto Currency Dashboard & Financial Visualization",
+    title: "Analyzing the Impact of Smartphones in the Workplace",
     github: "https://github.com/inextdeve",
     demo: "https://inext.dev",
   },
   {
     id: 3,
     image: IMG3,
-    title: "Crypto Currency Dashboard & Financial Visualization",
+    title: "PawsNPlaces: Your All-in-One Pet-Friendly App",
     github: "https://github.com/inextdeve",
     demo: "https://inext.dev",
   },
@@ -34,7 +34,7 @@ const data = [
 class Portfolio extends Component {
   render() {
     return (
-      <section id="portfolio">
+      <section id="projects">
         <h5>My Recent Work</h5>
         <h2>Portfolio</h2>
         <div className="container portfolio__container">
