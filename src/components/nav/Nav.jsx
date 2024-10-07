@@ -16,6 +16,7 @@ class Nav extends Component {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    this.setState({ active: "#home" }); // Reset active link to "Home"
   }
 
   toggleMenu = () => {
@@ -28,7 +29,7 @@ class Nav extends Component {
         <nav>
           <div className="navbar-brand">
             <h3>
-              <strong>Dexin</strong>
+              <strong>dexin</strong>
             </h3>
           </div>
 
@@ -43,13 +44,6 @@ class Nav extends Component {
               <h3>Home</h3>
             </a>
 
-            <a
-              onClick={() => this.setState({ active: "#about" })}
-              className={this.state.active === "#about" ? "active" : ""}
-              href="#about"
-            >
-              <h3>About</h3>
-            </a>
             <a
               onClick={() => this.setState({ active: "#projects" })}
               className={this.state.active === "#projects" ? "active" : ""}
