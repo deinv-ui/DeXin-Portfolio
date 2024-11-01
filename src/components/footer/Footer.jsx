@@ -28,13 +28,13 @@ class Footer extends Component {
         </ul>
         <div className="footer__social">
           <a href="https://www.facebook.com/inext.deve/" target="_blank">
-            <IoLogoFacebook />
+            <IoLogoFacebook className="social_icon" />
           </a>
           <a href="https://instagram.com/dexin.c" target="_blank">
-            <IoLogoInstagram />
+            <IoLogoInstagram className="social_icon" />
           </a>
           <a href="https://www.youtube.com/" target="_blank">
-            <IoLogoYoutube />
+            <IoLogoYoutube className="social_icon" />
           </a>
         </div>
         <div className="footer__copyright">

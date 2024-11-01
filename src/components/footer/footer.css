@@ -16,6 +16,7 @@ footer a {
 }
 .permalinks {
   display: flex;
+  font-size: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -42,7 +43,11 @@ footer a {
 }
 .footer__copyright {
   margin-bottom: 4rem;
+  font-size: 1.2rem;
   color: var(--color-bg);
+}
+.social_icon {
+  font-size: 1.5rem;
 }
 /* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
 @media screen and (max-width: 600px) {
