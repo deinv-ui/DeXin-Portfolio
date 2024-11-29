@@ -62,13 +62,15 @@ textarea {
   resize: none;
   color: var(--color-text); /* Text color */
   font-size: 1rem; /* Increased font size for readability */
-  transition: border-color var(--transition), background var(--transition); /* Transition for border color and background */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Add hover styles for input and textarea */
 input:hover,
 textarea:hover {
   border-color: var(--color-primary);
+  transition: 3s smooth;
+  background-color: var(--color-light);
   cursor: pointer; /* Indicate user can interact */
 }
 

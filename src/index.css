@@ -17,7 +17,7 @@
   --color-primary: #ff6f91; /* Soft Pink */
   --color-secondary: #ffc107; /* Amber */
   --color-white: #ffffff; /* White */
-  --color-light: rgba(255, 255, 255, 0.9); /* Very Light White */
+  --color-light: rgba(243, 243, 243, 0.9); /* Very Light White */
   --color-text: #333333; /* Dark Gray */
   --transition: all 400ms ease;
   --container-width-lg: 75%;
