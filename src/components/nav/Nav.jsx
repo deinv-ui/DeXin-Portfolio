@@ -28,9 +28,9 @@ class Nav extends Component {
       <>
         <nav>
           <div className="navbar-brand">
-            <h3>
-              <strong>dexin</strong>
-            </h3>
+            <a style={{ fontSize: "3rem" }} href="#home">
+              DEXIN
+            </a>
           </div>
 
           <div
@@ -41,7 +41,7 @@ class Nav extends Component {
               className={this.state.active === "#home" ? "active" : ""}
               href="#home"
             >
-              <h3>Home</h3>
+              <div>Home </div>
             </a>
 
             <a
@@ -49,14 +49,14 @@ class Nav extends Component {
               className={this.state.active === "#projects" ? "active" : ""}
               href="#projects"
             >
-              <h3>Projects</h3>
+              <div>Projects</div>
             </a>
             <a
               onClick={() => this.setState({ active: "#contact" })}
               className={this.state.active === "#contact" ? "active" : ""}
               href="#contact"
             >
-              <h3>Contact</h3>
+              <div>Contact</div>
             </a>
           </div>
 

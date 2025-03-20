@@ -14,7 +14,7 @@
 :root {
   --color-bg: #0e0ea4; /* Indigo */
   --color-bg-variant: #0a0a2f; /* Dark Slate Blue */
-  --color-primary: #ff6f91; /* Soft Pink */
+  --color-primary: #daff98; /* Soft Pink */
   --color-secondary: #ffc107; /* Amber */
   --color-white: #ffffff; /* White */
   --color-light: rgba(243, 243, 243, 0.9); /* Very Light White */
@@ -34,6 +34,7 @@ html {
 }
 
 body {
+  cursor: url("././assets/sword.cur"), auto;
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
@@ -99,6 +100,7 @@ a:hover {
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: var(--transition);
+  margin-right: 2rem;
 }
 
 .btn:hover {

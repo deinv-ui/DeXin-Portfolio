@@ -12,8 +12,8 @@ const data = [
     id: 1,
     image: IMG1,
     title: "JobStore Clone with Modern Redesign",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    github: "https://github.com/deinv-ui/Jobstore_Clone_Redesign",
+    demo: "https://jobstore-clone-redesign.vercel.app/",
   },
   {
     id: 2,

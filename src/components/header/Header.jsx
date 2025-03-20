@@ -1,39 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import CTA from "./CTA";
-import ME from "../../assets/Head_Pic.jpg"; // Image 2 (30%)
-import BG_IMAGE from "../../assets/header_bg.jpg"; // Image 1 (70%)
-import HeaderSocials from "./HeaderSocials";
 import "./header.css";
 
-class Header extends Component {
-  render() {
-    return (
-      <header id="home">
-        <div className="header__split">
-          <div className="header__image70">
-            <div className="header__container">
-              <div className="wrapper_description">
-                <h1 className="intro-text">
-                  <a href="#about" className="name-link">
-                    Frontend <br />
-                    Developer
-                  </a>
-                </h1>
-                <p className="description">
-                  I build scalable and interactive web applications, <br />
-                  focusing on intuitive user experiences and modern frontend
-                  technologies.
-                </p>
-                <CTA />
-              </div>
-            </div>
-          </div>{" "}
-          {/* 70% width background */}
-          {/* <div className="header__image30"></div> */}
+const Header = () => {
+  return (
+    <header id="home" className="header">
+      <div className="header__content">
+        {/* Left Section */}
+        <div className="header__text">
+          <h1>
+            BUILD <span className="highlight">FOR</span> IMPACT
+          </h1>
+          <p>
+            Crafting seamless, interactive, and high-performing web experiences.
+            Let's turn ideas into reality with clean code and modern design.
+          </p>
+          <CTA />
         </div>
-      </header>
-    );
-  }
-}
+
+        {/* Right Section with Images */}
+        <div className="header__images">
+          <div className="circle-img img1"></div>
+          <div className="circle-img img2"></div>
+          <div className="circle-img img3"></div>
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
