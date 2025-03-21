@@ -15,14 +15,14 @@ const Header = () => {
             Crafting seamless, interactive, and high-performing web experiences.
             Let's turn ideas into reality with clean code and modern design.
           </p>
+          {/*This is the buttons*/}
           <CTA />
         </div>
 
         {/* Right Section with Images */}
         <div className="header__images">
-          <div className="circle-img img1"></div>
+          {/* <div className="circle-img img1"></div> */}
           <div className="circle-img img2"></div>
-          <div className="circle-img img3"></div>
         </div>
       </div>
     </header>
