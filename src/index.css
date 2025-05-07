@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap");
 @import url("./imagesVar.css");
 
 * {
@@ -12,19 +12,29 @@
 }
 
 :root {
-  --color-bg: #5d2e8c; /* Indigo */
-  --color-bg-variant: #0a0a2f; /* Dark Slate Blue */
-  --color-primary: #daff98; /* Soft Pink */
-  --color-secondary: #ffc107; /* Amber */
-  --color-white: #ffffff; /* White */
-  --color-light: rgba(243, 243, 243, 0.9); /* Very Light White */
-  --color-text: #333333; /* Dark Gray */
+  --color-bg: #111827; /* Dark blue-gray background */
+  --color-bg-variant: #1f2937; /* Slightly lighter variant */
+  --color-primary: #ec4899; /* Hot pink */
+  --color-secondary: #8b5cf6; /* Purple */
+  --color-gradient: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-white: #ffffff;
+  --color-light: rgba(229, 231, 235, 0.85);
+  --color-text: #f9fafb;
   --transition: all 400ms ease;
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
 }
-
+.gradient-text {
+  background: var(--color-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -32,15 +42,11 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
-
 body {
-  cursor: url("././assets/purple_sword.gif"), url("././assets/sword.cur") auto;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   background: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text);
   line-height: 1.7;
-
-  /* Background with More Random Circles and Triangles */
 }
 
 /* ===================== GENERAL STYLES ================== */

@@ -9,21 +9,22 @@ const Header = () => {
         {/* Left Section */}
         <div className="header__text">
           <h1>
-            BUILD <span className="highlight">FOR</span> IMPACT
+            Code <span className="highlight">FOR</span> Impact
           </h1>
           <p>
-            Crafting seamless, interactive, and high-performing web experiences.
-            Let's turn ideas into reality with clean code and modern design.
+            I build intuitive, responsive, and scalable front-end interfaces
+            using modern frameworks like React, Vue, and Tailwind CSS. Let's
+            bring your ideas to life with clean code and bold design.
           </p>
-          {/*This is the buttons*/}
+
+          {/* Call-To-Action Buttons */}
           <CTA />
         </div>
 
-        {/* Right Section with Images */}
-        <div className="header__images">
-          {/* <div className="circle-img img1"></div> */}
-          <div className="circle-img img2"></div>
-        </div>
+        {/* Right Section - You can uncomment this if you want to add an image */}
+        {/* <div className="header__image">
+          <div className="circle-img img1"></div>
+        </div> */}
       </div>
     </header>
   );

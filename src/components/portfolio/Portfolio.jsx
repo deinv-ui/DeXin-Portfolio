@@ -2,7 +2,7 @@ import { Component } from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio3.png";
-import IMG3 from "../../assets/portfolio3.jpg";
+import IMG3 from "../../assets/portfolio4.png";
 import IMG4 from "../../assets/portfolio4.jpg";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
@@ -18,16 +18,15 @@ const data = [
   {
     id: 2,
     image: IMG2,
-    title: "Analyzing the Impact of Smartphones in the Workplace",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    title: "Jouku.com End-to-End Talent Acquisition Platform",
+    demo: "https://www.jouku.com/",
   },
   {
     id: 3,
     image: IMG3,
-    title: "PawsNPlaces: Your All-in-One Pet-Friendly App",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev",
+    title: "(FIGMA)PawsNPlaces: Your All-in-One Pet-Friendly App",
+    github: "https://github.com/deinv-ui/Flutter-PawsNPlace",
+    demo: "https://www.figma.com/design/OCkndrgANkorqPQzzvA5G4/PawNPlaces?node-id=0-1&t=OwJfwX52HSPOKxu6-1",
   },
 ];
 
@@ -42,14 +41,16 @@ class Portfolio extends Component {
             return (
               <article key={id} className="portfolio__item">
                 <div className="portfolio__item-image">
-                  <img src={image} alt="" />
+                  <img src={image} alt={title} />
                 </div>
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">
-                  <a href={github} className="btn" target="_blank">
-                    Github
-                  </a>
-                  <a href={demo} className="btn btn-primary" target="_blank">
+                  {github && (
+                    <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
+                      Github
+                    </a>
+                  )}
+                  <a href={demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                     Live Demo
                   </a>
                 </div>
@@ -61,5 +62,6 @@ class Portfolio extends Component {
     );
   }
 }
+
 
 export default Portfolio;
