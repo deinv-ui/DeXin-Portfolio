@@ -1,12 +1,13 @@
 /* ===========================
 🔹 Header Styles (Flex Layout)
+🔹 Header Styles (Flex Layout)
 =========================== */
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* centers content horizontally */
-  
+
   background-color: var(--color-bg);
   color: var(--color-white);
   min-height: 100vh;
@@ -14,7 +15,6 @@
   overflow: hidden;
   position: relative;
 }
-
 
 /* Add a subtle gradient overlay */
 .header::before {
@@ -35,13 +35,23 @@
 
 /* ===========================
 🔹 Header Content (Text + Image)
+🔹 Header Content (Text + Image)
 =========================== */
 .header__content {
   display: flex;
   flex-direction: row;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  justify-content: space-between;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 4rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
   gap: 4rem;
@@ -55,20 +65,33 @@
 =========================== */
 .header__text {
   flex: 1;
+  flex: 1;
   min-width: 300px;
 }
 
 .header__text h1 {
   font-size: 4.5rem;
   font-weight: 800;
+  font-size: 4.5rem;
+  font-weight: 800;
   text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--color-white);
   line-height: 1.2;
   margin-bottom: 2rem;
   color: var(--color-white);
 }
 
 /* Create a gradient effect for the word "FOR" */
+/* Create a gradient effect for the word "FOR" */
 .header__text .highlight {
+  background: var(--color-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(236, 72, 153, 0.3);
   background: var(--color-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -122,9 +145,54 @@
 .btn-secondary:hover {
   background: rgba(139, 92, 246, 0.1);
   transform: translateY(-3px);
+  font-size: 1.25rem;
+  color: var(--color-light);
+  max-width: 90%;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* Style for CTA buttons */
+.cta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: var(--color-gradient);
+  color: var(--color-white);
+  border: none;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.1);
+  transform: translateY(-3px);
 }
 
 /* ===========================
+🔹 Single Image
 🔹 Single Image
 =========================== */
 .header__image {
@@ -134,7 +202,17 @@
   justify-content: center;
 }
 
+.header__image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
 .circle-img {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
@@ -152,34 +230,135 @@
 }
 
 .img1 {
-  background-image: url("../../assets/cat.png");
+  @keyframes .anime-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-fade-slide {
+    animation: fadeSlideIn 1.2s ease forwards;
+  }
+  .shadow-glow {
+    box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15),
+      0 8px 20px rgba(250, 44, 216, 0.4),
+      inset 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+
+  background-image: url("../../assets/profile_picture.jpeg");
+}
+/* Wrap image and text vertically */
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Profile text below the image */
+.profile-info {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--color-white);
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+.profile-info h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  color: var(--color-light);
+  margin: 0.3rem 0 0;
+  opacity: 0.9;
+}
+.profile-mobile-wrapper {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 /* ===========================
 🔥 Responsive Design
 =========================== */
 @media screen and (max-width: 768px) {
+  .desktop_wrapper {
+    display: none;
+  }
   .header__content {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
 
-  .header__text h1 {
-    font-size: 3rem;
+  .header__text {
+    max-width: 100%;
+    margin-top: 0.5rem;
   }
 
-  .header__text p {
-    font-size: 1.1rem;
-    margin: 1rem auto;
+  .header__images {
+    display: none;
   }
 
   .circle-img {
     width: 16rem;
     height: 16rem;
   }
+  .header__images {
+    grid-auto-columns: minmax(120px, 1fr); /* Adjusts size on small screens */
+    gap: 1.5rem;
+  }
+}
 
-  .cta {
-    justify-content: center;
+.img1 {
+  background-image: url("../../assets/profile_picture.jpeg");
+}
+.img2 {
+  background-image: url("../../assets/suncat.png");
+}
+
+/* ===========================
+🔥 Responsive Design (Mobile & Tablet)
+=========================== */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 7rem 2rem 1.5rem; /* Extra top space for mobile */
+  }
+  .header__content {
+    grid-template-columns: 1fr; /* Stack in a single column */
+    text-align: center;
+  }
+
+  .header__text {
+    max-width: 100%;
+  }
+
+  .header__images {
+    grid-template-columns: repeat(2, 1fr); /* Show two images per row */
+    gap: 2rem;
+    margin-top: 2rem;
   }
 }

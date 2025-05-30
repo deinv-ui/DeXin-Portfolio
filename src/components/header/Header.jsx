@@ -5,8 +5,18 @@ import "./header.css";
 const Header = () => {
   return (
     <header id="home" className="header">
-      <div className="header__content">
-        {/* Left Section */}
+      <div className="blob-background"></div>
+
+      <div className="header__content fade-in">
+        <div class="profile-mobile-wrapper">
+          <div class="circle-img img1 shadow-glow"></div>
+          <div class="profile-info">
+            <h2>De Xin</h2>
+            <p>Front-End Developer</p>
+          </div>
+        </div>
+
+        {/* Text Section */}
         <div className="header__text">
           <h1>
             Code <span className="highlight">FOR</span> Impact
@@ -16,15 +26,19 @@ const Header = () => {
             using modern frameworks like React, Vue, and Tailwind CSS. Let's
             bring your ideas to life with clean code and bold design.
           </p>
-
-          {/* Call-To-Action Buttons */}
           <CTA />
         </div>
 
-        {/* Right Section - You can uncomment this if you want to add an image */}
-        {/* <div className="header__image">
-          <div className="circle-img img1"></div>
-        </div> */}
+        {/* Image Section */}
+        <div className="desktop_wrapper header__image animate-float">
+          <div className="image-wrapper">
+            <div className="circle-img img1 shadow-glow"></div>
+            <div className="profile-info">
+              <h2>De Xin</h2>
+              <p>Front-End Developer</p>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
