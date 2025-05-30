@@ -60,7 +60,7 @@ textarea {
   background: var(--color-white); /* Background color for input and textarea */
   border: 2px solid var(--color-primary-variant);
   resize: none;
-  color: var(--color-text); /* Text color */
+  color: black; /* Text color */
   font-size: 1rem; /* Increased font size for readability */
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }

@@ -128,7 +128,7 @@ nav {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(5, 45, 35, 0.95);
+    background: var(--color-bg);
     justify-content: center;
     align-items: center;
     gap: 2rem;
