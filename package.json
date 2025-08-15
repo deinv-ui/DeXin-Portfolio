@@ -5,14 +5,14 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@colisweb/rescript-react-icons-ai": "1.0.0",
     "@emailjs/browser": "3.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "4.3.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^5.0.1",
     "swiper": "8.0.7",
-    "swiper.js": "1.0.0",
-    "@colisweb/rescript-react-icons-ai": "1.0.0"
+    "swiper.js": "1.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
