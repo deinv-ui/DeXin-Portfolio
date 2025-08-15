@@ -52,7 +52,12 @@ class Contact extends Component {
               </a>
             </div>
           </div>
-          <form ref={this.form} onSubmit={this.sendEmail} action="">
+          <form
+            className="contact_form"
+            ref={this.form}
+            onSubmit={this.sendEmail}
+            action=""
+          >
             <input
               type="text"
               name="name"

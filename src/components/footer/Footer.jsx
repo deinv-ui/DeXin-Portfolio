@@ -17,12 +17,9 @@ class Footer extends Component {
           <li>
             <a href="#about">About</a>
           </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
 
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
           </li>
 
           <li>
@@ -30,14 +27,14 @@ class Footer extends Component {
           </li>
         </ul>
         <div className="footer__social">
-          <a href="https://www.facebook.com/inext.deve/" target="_blank">
-            <IoLogoFacebook />
+          <a href="https://www.facebook.com/" target="_blank">
+            <IoLogoFacebook className="social_icon" />
           </a>
           <a href="https://instagram.com/dexin.c" target="_blank">
-            <IoLogoInstagram />
+            <IoLogoInstagram className="social_icon" />
           </a>
           <a href="https://www.youtube.com/" target="_blank">
-            <IoLogoYoutube />
+            <IoLogoYoutube className="social_icon" />
           </a>
         </div>
         <div className="footer__copyright">

@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap");
 @import url("./imagesVar.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,30 +10,43 @@
   list-style: none;
   text-decoration: none;
 }
+
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-bg: #111827; /* Dark blue-gray background */
+  --color-bg-variant: #1f2937; /* Slightly lighter variant */
+  --color-primary: #ec4899; /* Hot pink */
+  --color-secondary: #8b5cf6; /* Purple */
+  --color-gradient: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-white: #ffffff;
+  --color-light: rgba(229, 231, 235, 0.85);
+  --color-text: #f9fafb;
   --transition: all 400ms ease;
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
 }
+.gradient-text {
+  background: var(--color-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 html {
   scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   background: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text);
   line-height: 1.7;
-  background-image: var(--bg-texture);
 }
 
 /* ===================== GENERAL STYLES ================== */
@@ -41,6 +55,7 @@ body {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
+
 h1,
 h2,
 h3,
@@ -49,31 +64,39 @@ h5,
 h6 {
   font-weight: 500;
 }
+
 h1 {
   font-size: 2.5rem;
 }
+
 section {
   margin-top: 8rem;
 }
+
 section > h2,
 section > h5 {
   text-align: center;
   color: var(--color-light);
 }
+
 section > h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
 }
+
 .text-light {
   color: var(--color-light);
 }
+
 a {
   color: var(--color-primary);
   transition: var(--transition);
 }
+
 a:hover {
   color: var(--color-white);
 }
+
 .btn {
   width: max-content;
   display: inline-block;
@@ -83,16 +106,20 @@ a:hover {
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: var(--transition);
+  margin-right: 2rem;
 }
+
 .btn:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
 }
+
 .btn-primary {
   background: var(--color-primary);
   color: var(--color-bg);
 }
+
 img {
   display: block;
   width: 100%;
