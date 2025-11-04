@@ -2,7 +2,7 @@ import { Component } from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio3.png";
-import IMG3 from "../../assets/portfolio4.png";
+import IMG3 from "../../assets/portfolio6_2.png";
 import IMG4 from "../../assets/portfolio4.jpg";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
@@ -24,9 +24,9 @@ const data = [
   {
     id: 3,
     image: IMG3,
-    title: "(FIGMA)PawsNPlaces: Your All-in-One Pet-Friendly App",
-    github: "https://github.com/deinv-ui/Flutter-PawsNPlace",
-    demo: "https://www.figma.com/design/OCkndrgANkorqPQzzvA5G4/PawNPlaces?node-id=0-1&t=OwJfwX52HSPOKxu6-1",
+    title: "Finance Portfolio Tracker",
+    github: "https://github.com/deinv-ui/fast_dashboard",
+    demo: "https://fastdashboarddeploy-d1h8-hi0jaoh0w-deinv-uis-projects.vercel.app",
   },
 ];
 
@@ -46,11 +46,21 @@ class Portfolio extends Component {
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">
                   {github && (
-                    <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={github}
+                      className="btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Github
                     </a>
                   )}
-                  <a href={demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={demo}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo
                   </a>
                 </div>
@@ -62,6 +72,5 @@ class Portfolio extends Component {
     );
   }
 }
-
 
 export default Portfolio;
