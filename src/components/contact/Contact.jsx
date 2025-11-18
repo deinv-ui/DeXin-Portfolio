@@ -4,6 +4,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { RiWhatsappLine } from "react-icons/ri";
 import emailjs from "@emailjs/browser";
+import React from "react";
+
 class Contact extends Component {
   constructor() {
     super();

@@ -6,6 +6,8 @@ import {
   IoLogoYoutube,
 } from "react-icons/io";
 import "./footer.css";
+import React from "react";
+
 class Footer extends Component {
   render() {
     return (
