@@ -65,7 +65,6 @@ const Portfolio: React.FC = () => {
                   {github && (
                     <Button
                       href={github}
-                      target="_blank"
                       rel="noopener noreferrer"
                       variant="outline"
                     >
@@ -74,7 +73,6 @@ const Portfolio: React.FC = () => {
                   )}
                   <Button
                     href={demo}
-                    target="_blank"
                     rel="noopener noreferrer"
                     variant="primary"
                   >

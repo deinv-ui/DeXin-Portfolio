@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-gray-900 p-3 rounded-full flex items-center justify-center 
-                       hover:shadow-lg hover:bg-transparent hover:text-white hover:bg-black 
+                       hover:shadow-lg hover:bg-transparent hover:border hover:text-white hover:border-white 
                        "
           >
             <Icon className="text-2xl md:text-xl" />
