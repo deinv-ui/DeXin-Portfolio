@@ -26,7 +26,7 @@ const data = [
     image: IMG3,
     title: "Finance Portfolio Tracker",
     github: "https://github.com/deinv-ui/fast_dashboard",
-    demo: "https://fastdashboarddeploy-d1h8.vercel.app/stock",
+    demo: "https://fastdashboarddeploy.vercel.app/",
   },
 ];
 
