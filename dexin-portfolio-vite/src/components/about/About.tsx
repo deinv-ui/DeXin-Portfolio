@@ -3,7 +3,6 @@ import ME from "../../assets/Head_Pic.jpg";
 import { BsAwardFill } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { FaProjectDiagram } from "react-icons/fa";
-import "./about.css";
 
 class About extends Component {
   render() {
