@@ -9,9 +9,9 @@ const Header: React.FC = () => {
       className="relative flex flex-col justify-center items-center min-h-screen bg-bg text-text overflow-hidden px-6 pt-24 pb-16"
     >
       {/* Gradient overlay */}
-      <div className="absolute top-0 right-0 w-3/5 h-full bg-gradient-to-br from-secondary/5 via-primary/10 pointer-events-none z-0" />
+      <div className="absolute top-0 right-0 w-3/5 h-full bg-gradient-to-br from-secondary/5 via-primary/10 pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between max-w-[1200px] w-full gap-12 md:gap-16">
+      <div className="relative flex flex-col-reverse md:flex-row items-center justify-between max-w-[1200px] w-full gap-12 md:gap-16">
         {/* Text section */}
         <div className="flex-1 min-w-[280px] text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-extrabold uppercase mb-6 md:mb-8 leading-tight">
