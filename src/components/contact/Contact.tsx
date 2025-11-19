@@ -1,8 +1,8 @@
-import React, { useRef, FormEvent, useState } from "react";
+import React, { useRef, type FormEvent, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiWhatsappLine } from "react-icons/ri";
-import emailjs from "@emailjs/browser";
 import Button from "../Button";
+import { useToastStore } from "../../stores/toastStore";
 
 const contactMethods = [
   {
@@ -20,29 +20,39 @@ const contactMethods = [
 ];
 
 const Contact: React.FC = () => {
+  const toast = useToastStore.getState();
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
-  const sendEmail = (e: FormEvent) => {
+  const formEndpoint = "https://formspree.io/f/mblwdbkk";
+
+  const sendForm = async (e: FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
 
     setStatus("sending");
+    const formData = new FormData(formRef.current);
 
-    emailjs
-      .sendForm(
-        "service_qh0lcyp",
-        "template_cnz0aqs",
-        formRef.current,
-        "VlZynPkd0KN0nWRl9"
-      )
-      .then(
-        () => {
-          setStatus("success");
-          formRef.current?.reset();
-        },
-        () => setStatus("error")
-      );
+    try {
+      const res = await fetch(formEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        toast.showToast("Message sent successfully!", "success");
+        formRef.current.reset();
+      } else {
+        setStatus("error");
+        toast.showToast("Something went wrong. Please try again.", "error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -83,8 +93,8 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <form
             ref={formRef}
-            onSubmit={sendEmail}
-            className="flex-1 bg-bg rounded-2xl shadow-md flex flex-col gap-4"
+            onSubmit={sendForm}
+            className="flex-1 bg-bg rounded-2xl shadow-md flex flex-col gap-4 p-6"
           >
             <input
               type="text"
@@ -108,21 +118,14 @@ const Contact: React.FC = () => {
               className="w-full px-4 py-3 rounded-md border-2 border-primary bg-white text-bg text-sm resize-none focus:outline-none focus:border-secondary hover:bg-gray-100 transition"
             />
 
-            <Button type="submit" variant="primary" disabled={status === "sending"}>
+            <Button
+              type="submit"
+              variant="primary"
+              disabled={status === "sending"}
+            >
               {status === "sending" ? "Sending..." : "Send Message"}
             </Button>
 
-            {/* Status Messages */}
-            {status === "success" && (
-              <p className="text-green-500 text-sm mt-2">
-                Message sent successfully! I’ll get back to you soon.
-              </p>
-            )}
-            {status === "error" && (
-              <p className="text-red-500 text-sm mt-2">
-                Something went wrong. Please try again later.
-              </p>
-            )}
           </form>
         </div>
       </div>
