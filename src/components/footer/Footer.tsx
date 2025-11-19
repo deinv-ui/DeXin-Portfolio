@@ -2,7 +2,7 @@ import React from "react";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoYoutube } from "react-icons/io";
 
 const Footer: React.FC = () => {
-  const permalinks = ["about", "projects", "contact"];
+  const permalinks = ["home", "projects", "contact"];
   const socialIcons = [IoLogoFacebook, IoLogoInstagram, IoLogoYoutube];
 
   return (

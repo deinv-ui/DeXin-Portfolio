@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Nav: React.FC = () => {
@@ -9,6 +9,18 @@ const Nav: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setActive("#home");
   };
+
+  useEffect(() => {
+  setActive(window.location.hash || "#home");
+
+  const handleHashChange = () => {
+    setActive(window.location.hash || "#home");
+  };
+
+  window.addEventListener("hashchange", handleHashChange);
+  return () => window.removeEventListener("hashchange", handleHashChange);
+}, []);
+
 
   return (
     <>
