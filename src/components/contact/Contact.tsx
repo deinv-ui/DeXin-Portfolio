@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
           <form
             ref={formRef}
             onSubmit={sendForm}
-            className="flex-1 bg-bg rounded-2xl shadow-md flex flex-col gap-4 p-6"
+            className="flex-1 bg-bg rounded-2xl shadow-md flex flex-col gap-4"
           >
             <input
               type="text"

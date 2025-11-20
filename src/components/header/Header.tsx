@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header
       id="home"
-      className="relative flex flex-col justify-center items-center min-h-screen bg-bg text-text px-6 pt-24 pb-16"
+      className="relative flex flex-col justify-start md:justify-center items-center min-h-screen bg-bg text-text px-6 pt-24 pb-16"
     >
       <div className="absolute top-0 right-0 w-3/5 h-full bg-gradient-to-br from-secondary/5 via-primary/10 pointer-events-none" />
 
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Profile image */}
-        <div className="flex-1 min-w-[280px] flex justify-center md:justify-end">
+        <div className="flex-1 min-w-[280px] md:flex hidden md:justify-end">
           <div className="flex flex-col items-center">
             <div
               className="w-56 h-56 md:w-64 md:h-64 rounded-full shadow-[0_0_0_4px_rgba(236,72,153,0.15),0_8px_20px_rgba(250,44,216,0.4),inset_0_0_10px_rgba(255,255,255,0.05)] transition-transform duration-500 hover:-translate-y-2 bg-cover bg-center"

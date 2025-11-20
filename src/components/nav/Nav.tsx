@@ -71,8 +71,8 @@ const Nav: React.FC = () => {
       </nav>
 
       <div
-        className={`md:hidden fixed inset-0 bg-black/90 backdrop-blur-md flex flex-col justify-center items-center gap-10 transition-transform duration-300 ease-in-out z-50
-          ${menuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"}`}
+        className={`md:hidden fixed inset-0 bg-black/90 backdrop-blur-md flex flex-col justify-start items-center gap-10 transition-transform duration-300 ease-in-out z-50
+          ${menuOpen ? "translate-y-0 opacity-100 pointer-events-auto p-40" : "-translate-y-full opacity-0 pointer-events-none"}`}
       >
         <div
           className="absolute top-6 right-6 text-3xl text-white cursor-pointer hover:text-primary transition-colors duration-300"
