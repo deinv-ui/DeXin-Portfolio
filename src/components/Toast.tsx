@@ -1,6 +1,5 @@
 import React, { useEffect} from "react";
 import { useToastStore } from "../stores/toastStore";
-import { styleText } from "util";
 
 const Toast: React.FC = ()=> {
       const { message, type, visible, hideToast } = useToastStore();
