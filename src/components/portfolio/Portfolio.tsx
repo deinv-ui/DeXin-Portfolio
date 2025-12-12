@@ -1,5 +1,5 @@
 import React from "react";
-import IMG1 from "../../assets/portfolio1.png";
+import IMG1 from "../../assets/Populer.png";
 import IMG2 from "../../assets/portfolio3.png";
 import IMG3 from "../../assets/portfolio6_2.png";
 import Button from "../Button";
@@ -16,9 +16,8 @@ const data: PortfolioItem[] = [
   {
     id: 1,
     image: IMG1,
-    title: "JobStore Clone with Modern Redesign",
-    github: "https://github.com/deinv-ui/Jobstore_Clone_Redesign",
-    demo: "https://jobstore-clone-redesign.vercel.app/",
+    title: "Populer – A Professional Content Platform with Smart Discovery",
+    demo: "https://www.populer.com/",
   },
   {
     id: 2,
@@ -52,11 +51,11 @@ const Portfolio: React.FC = () => {
               key={id}
               className="bg-bg-variant rounded-2xl border border-gray-800 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
             >
-              <div className="overflow-hidden rounded-t-2xl">
+              <div className="overflow-hidden rounded-t-2xl pt-0">
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+                  className="transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
