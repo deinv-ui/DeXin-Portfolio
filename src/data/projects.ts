@@ -1,6 +1,6 @@
 import populer from "../assets/populer.jpg";
 import jouku from "../assets/jouku.jpg";
-import financeTracker from "../assets/finance-tracker.jpg";
+import watch from "../assets/watch.png";
 
 export type Project = {
   id: string;
@@ -54,17 +54,17 @@ export const projects: Project[] = [
     href: "https://www.jouku.com/",
   },
   {
-    id: "finance-tracker",
+    id: "watch",
     kind: "lab",
     kindLabel: "Personal project",
-    title: "Finance Portfolio Tracker",
-    caption: "Watchlist dashboard",
+    title: "Watch",
+    caption: "Portfolio tracking dashboard",
     description:
       "Search a symbol, pin it to the board, and read open / high / low against the previous close on a per-ticker chart. Built to get properly comfortable with live market data, chart rendering and a card grid that stays readable whether it holds three tickers or thirty.",
-    image: financeTracker,
-    alt: "A stock dashboard: a grid of ticker cards for AAPL, MSFT, GOOGL, AMZN, TSLA and FB, each showing last price, open, high, low and previous close above a small line chart.",
-    width: 1120,
-    height: 564,
+    image: watch,
+    alt: "Watch, a portfolio dashboard: a sidebar with Portfolio, Analysis, Organize and Import, a total portfolio value of $141,126.20 up 0.61% today, an intraday line chart, and stat cards for day change, total return, cash available and best performer.",
+    width: 1497,
+    height: 686,
     url: "fastdashboarddeploy.vercel.app",
     href: "https://fastdashboarddeploy.vercel.app/",
     source: "https://github.com/deinv-ui/fast_dashboard",
