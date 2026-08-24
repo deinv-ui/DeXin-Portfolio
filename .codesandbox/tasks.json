@@ -3,64 +3,36 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "yarn install"
+      "command": "npm install"
     }
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "start": {
-      "name": "start",
-      "command": "yarn start",
+    "dev": {
+      "name": "dev",
+      "command": "npm run dev",
       "runAtStart": true,
       "preview": {
-        "port": 3000
+        "port": 5173
       }
     },
     "build": {
       "name": "build",
-      "command": "yarn build"
-    },
-    "test": {
-      "name": "test",
-      "command": "yarn test"
-    },
-    "eject": {
-      "name": "eject",
-      "command": "yarn eject"
-    }
-  }
-}
-
-{
-  // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": [
-    {
-      "command": "yarn install",
-      "name": "Install Dependencies"
-    }
-  ],
-
-  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-  "tasks": {
-    "start": {
-      "name": "start",
-      "command": "yarn start",
-      "runAtStart": true
-    },
-    "build": {
-      "name": "build",
-      "command": "yarn build",
+      "command": "npm run build",
       "runAtStart": false
     },
-    "test": {
-      "name": "test",
-      "command": "yarn test",
-      "runAtStart": false
+    "preview": {
+      "name": "preview",
+      "command": "npm run preview",
+      "runAtStart": false,
+      "preview": {
+        "port": 4173
+      }
     },
-    "eject": {
-      "name": "eject",
-      "command": "yarn eject",
+    "typecheck": {
+      "name": "typecheck",
+      "command": "npm run typecheck",
       "runAtStart": false
     }
   }

@@ -1,45 +1,33 @@
 {
-  "name": "react-portfolio-website",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/main.jsx",
+  "name": "dexin-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio of Tan De Xin, front-end developer.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
-    "@colisweb/rescript-react-icons-ai": "1.0.0",
-    "@emailjs/browser": "3.4.0",
-    "node": "^24.6.0",
-    "nvm": "^0.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "4.3.1",
-    "react-scripts": "^5.0.1",
-    "swiper": "8.0.7",
-    "swiper.js": "1.0.0",
-    "three": "^0.169.0",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@babel/runtime": "7.13.8",
-    "@tailwindcss/postcss": "^4.1.17",
-    "@types/react": "^19.2.6",
-    "@types/react-dom": "^19.2.3",
-    "@types/swiper": "^5.4.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
-    "typescript": "^3.9.10",
+    "typescript": "^5.6.3",
     "vite": "^7.2.2"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not ie <= 11",
     "not op_mini all"
   ]
 }
